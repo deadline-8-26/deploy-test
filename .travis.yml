@@ -46,6 +46,8 @@ deploy:
 
     deployment_group: bedi-webservice-group
     region: ap-northeast-2
+    on:
+      branch: main
 
 # CI 실행 완료시 메일로 알람
 notifications:
