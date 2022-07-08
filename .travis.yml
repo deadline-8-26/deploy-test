@@ -27,18 +27,12 @@ deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-
     bucket: bedi
     region: ap-northeast-2
     skip_cleanup: true
     acl: private
     local_dir: deploy
-    wait_until_deployed : true
-    on:
-      repo: deadline-8-26/deploy-test
-      branches:
-        only:
-          - main
+    wait-until-deployed: true
 
 # CI 실행 완료시 메일로 알람
 notifications:
