@@ -33,7 +33,12 @@ deploy:
     skip_cleanup: true
     acl: private
     local_dir: deploy
-    wait_until_deployed: true
+    wait_until_deployed : true
+    on:
+      repo: deadline-8-26/deploy-test
+      branches:
+        only:
+          - main
 
 # CI 실행 완료시 메일로 알람
 notifications:
