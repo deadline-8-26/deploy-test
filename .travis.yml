@@ -33,6 +33,8 @@ deploy:
     acl: private
     local_dir: deploy
     edge: true
+    on:
+      branch: main
 
 # CI 실행 완료시 메일로 알람
 notifications:
