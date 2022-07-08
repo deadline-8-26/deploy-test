@@ -29,7 +29,7 @@ deploy:
     secret_access_key: $AWS_SECRET_KEY
     bucket: bedi
     region: ap-northeast-2
-    skip_cleanup: true
+    cleanup: false
     acl: private
     local_dir: deploy
     edge: true
