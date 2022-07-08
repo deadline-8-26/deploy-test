@@ -36,6 +36,17 @@ deploy:
     on:
       branch: main
 
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: bedi
+    key: bedi-webservice.zip
+    bundle_type: zip
+    application: bedi-webservice
+
+    deployment_group: bedi-webservice-group
+    region: ap-northeast-2
+
 # CI 실행 완료시 메일로 알람
 notifications:
   email:
