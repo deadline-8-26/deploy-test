@@ -1,0 +1,22 @@
+<html>
+<body>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+    function handleCredentialResponse(response) {
+        console.log(response);
+    }
+    window.onload = function () {
+        google.accounts.id.initialize({
+            client_id: "24418312077-pu3t75in2eeo4o519hvvcick5mgf5h96.apps.googleusercontent.com",
+            callback: handleCredentialResponse
+        });
+        google.accounts.id.renderButton(
+            document.getElementById("buttonDiv"),
+            { theme: "outline", size: "large" }  // customization attributes
+        );
+        google.accounts.id.prompt(); // also display the One Tap dialog
+    }
+</script>
+<div id="buttonDiv"></div>
+</body>
+</html>

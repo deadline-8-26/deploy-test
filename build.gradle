@@ -19,12 +19,29 @@ repositories {
 }
 
 dependencies {
+	// mysql
 	runtimeOnly 'mysql:mysql-connector-java'
+
+	// jpa
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// lombok
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	// jwt
+	implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.2'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.2'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.2'
+
+	// google api
+	implementation 'com.google.api-client:google-api-client:1.32.1'
 }
 
 tasks.named('test') {
